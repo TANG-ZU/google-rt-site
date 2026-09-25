@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · rt</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 3rem 1.25rem 4rem;
+    font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 16px; line-height: 1.8;
+    background: #ffffff; color: #1a1a1a;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #16161a; color: #e8e6e3; }
+    a { color: #7fb1ff; }
+    .muted { color: #a8a8b0 !important; }
+    code { background: #26262c !important; }
+    .card { background: #1f1f24 !important; border-color: #33333a !important; }
+    footer { border-color: #33333a !important; }
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; font-weight: 600; margin: 0 0 .3rem; }
+  h2 { font-size: 1.02rem; font-weight: 600; margin: 2.1rem 0 .5rem; }
+  .muted { color: #66666e; font-size: .9rem; }
+  .card {
+    background: #f6f6f7; border: 1px solid #e3e3e6; border-radius: 12px;
+    padding: 1.1rem 1.25rem; margin: 1.5rem 0;
+  }
+  ul { padding-left: 1.25rem; margin: .5rem 0; }
+  li { margin: .35rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: .75rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid #e3e3e6; vertical-align: top; }
+  @media (prefers-color-scheme: dark) { th, td { border-color: #33333a; } }
+  code {
+    background: #f0f0f2; border-radius: 4px; padding: .12em .38em;
+    font-size: .88em; word-break: break-all;
+  }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #e3e3e6; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>隐私政策</h1>
+  <p class="muted">rt · 最后更新：2026-09-25</p>
+
+  <p>本页说明 rt（下称"本应用"）如何访问、使用、存储和共享 Google 用户数据。
+     本应用是供本人使用而开发的个人工具，没有其他用户。</p>
+
+  <h2>1. 访问哪些 Google 数据</h2>
+  <p>本应用仅通过 Google OAuth 2.0 申请以下权限，且只申请实现功能所必需的最小范围：</p>
+  <table>
+    <tr>
+      <th style="width:34%">权限（scope）</th>
+      <th>用途</th>
+    </tr>
+    <tr>
+      <td><code>https://www.googleapis.com/auth/drive.file</code></td>
+      <td>创建、读取、更新由本应用创建或经本人通过本应用打开的文件。<strong>无法访问</strong>云端硬盘中与本应用无关的其它文件。</td>
+    </tr>
+  </table>
+  <p>本应用不申请 Gmail、日历、联系人等其它任何权限，也不读取 Google 账号的密码、支付信息或身份信息。</p>
+
+  <h2>2. 如何使用这些数据</h2>
+  <ul>
+    <li>仅用于在本人的云端硬盘上执行本应用的核心功能（备份、整理、导出等自动化操作）</li>
+    <li>不会用于广告、用户画像、信用评估，也不会用于训练机器学习模型</li>
+    <li>不会把数据出售或转让给任何第三方</li>
+  </ul>
+
+  <h2>3. 如何存储数据</h2>
+  <ul>
+    <li>OAuth 令牌（access token / refresh token）仅保存在<strong>运行本应用的这台电脑本地</strong>，例如
+      <code>google_token.json</code>，不会被上传到任何服务器</li>
+    <li>本应用没有服务器，不收集、不缓存、不持有任何用户数据副本</li>
+    <li>通过 API 读取的文件内容仅在内存中处理，处理完成后即释放，不落盘留存</li>
+  </ul>
+
+  <h2>4. 数据共享</h2>
+  <p>本应用不与任何第三方共享 Google 用户数据。除为提供上述功能所必需（向 Google Drive API 发起请求）之外，不存在任何数据传输。</p>
+
+  <h2>5. Google API 服务用户数据政策</h2>
+  <div class="card">
+    <p style="margin:0">本应用对从 Google API 获取的信息的使用，遵循
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>，
+      包括其 <strong>Limited Use</strong> 要求。</p>
+    <p style="margin:.75rem 0 0" class="muted">rt's use of information received from Google APIs will adhere to the
+      Google API Services User Data Policy, including the Limited Use requirements.</p>
+  </div>
+
+  <h2>6. 数据的保留与删除</h2>
+  <ul>
+    <li>撤销授权：随时访问
+      <a href="https://myaccount.google.com/permissions" rel="noopener">Google 账号权限页</a>
+      移除本应用的访问权，本应用将立即无法再访问任何数据</li>
+    <li>删除本地令牌：直接删除本机的令牌文件（如 <code>google_token.json</code>）即可</li>
+    <li>由于本应用不在任何服务器上留存数据，撤销授权并删除本地文件后，不残留任何数据的副本</li>
+    <li>修改 Google 账号密码也会使已签发的令牌失效</li>
+  </ul>
+
+  <h2>7. 儿童隐私</h2>
+  <p>本应用不面向 13 岁以下儿童，也不会有意收集儿童的个人信息。</p>
+
+  <h2>8. 政策变更</h2>
+  <p>本政策如有更新，将直接修订本页面并更新页首的"最后更新"日期。</p>
+
+  <h2>9. 联系方式</h2>
+  <p>对本政策或数据处理有任何疑问，请联系：<a href="mailto:ebbakynolanvvj66@gmail.com">ebbakynolanvvj66@gmail.com</a></p>
+
+  <footer>
+    <p class="muted" style="margin:0">
+      © 2026 rt ·
+      返回<a href="index.html">首页</a>
+    </p>
+  </footer>
+
+</main>
+</body>
+</html>
